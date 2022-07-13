@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\sourav"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "transparent web"
+	}
+}

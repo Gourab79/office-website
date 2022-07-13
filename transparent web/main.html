@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        *{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+           
+        }
+        .nav{
+            position: fixed;
+            top: 0;
+            background-color: grey;
+            height: 52px;
+            width: 100%;
+            opacity: 0.3;
+            animation: fade;
+            z-index: 10;
+        }
+        .logo{
+            height: 50px;
+            width: 50px;
+            position: fixed;
+            box-shadow: 5px 5px 5px;
+            border-radius:50% ;
+            animation: fade;
+            z-index: 10;
+            
+            
+
+        }
+       .top ul{
+            position: fixed;
+            top:0;
+            right: 00;
+            margin-right:50px ;
+            margin-top: 8px;
+            z-index: 10;
+
+            
+          
+            
+            
+            
+
+            
+            
+        }
+       .top li{
+            list-style-type: none;
+            padding: 7px 15px ;
+            float: left;
+            margin-right: 10px;
+            color: black;
+            font-weight: 800;
+            font-size: 20px;
+            z-index: 10;
+         
+        }
+        a{
+            text-decoration: none;
+        }
+       .top li:hover{
+           text-decoration: underline rgb(0, 204, 255) 3px;
+           font-size: larger;
+           
+        }
+       #list{
+           display: none;
+           background-color: lightcyan;
+           height: 100px;
+           width: 300px;
+           text-align: center;
+
+       }
+       .bg img{
+           width: 100%;
+           height: 800px;
+           animation: fade 2s forwards;
+           filter: blur(1.5px);
+           
+
+       }
+       @keyframes fade {
+           0%{
+               opacity: 0;
+           }
+           100%{
+               opacity: 0.6;
+           }
+           
+       }
+       .main-text{
+           font-size: 2cm;
+           z-index: 3;
+           text-align: center;
+           position:relative;
+           top: -650px;
+           
+       }
+       .bg button{
+           position: relative;
+           top: -600px;
+           font-size: x-large;
+           padding:10px 20px;
+           border: rgb(0, 120, 156) solid 3px;
+           border-radius: 30px;
+           background: transparent;
+           color: rgb(0, 0, 0);
+           left: 700px;
+              
+       }
+       .bg button:hover{
+           animation: button forwards 0.5s;
+       }
+       @keyframes button {
+           0%{
+               background-color: white;
+               opacity: 0.5;
+           }
+           100%{
+               background-color: #b6dbff;
+               opacity: 1;
+           }
+           
+       }
+       .images{
+           height:100px;
+           border: rgb(0, 162, 255) 3px solid;
+           border-radius: 50%;
+           
+       }
+       .class1{
+          
+          
+           justify-content: center;
+           align-self: center;
+           padding: 10px;
+           text-align: center;
+           border: 1px solid transparent;
+        border-radius: 20px;
+       }
+       .under-bg{
+        display: grid;
+        grid-template-columns: 300px 300px  300px;
+        grid-gap: 150px;
+        margin: 0px 100px 0px 181px ;
+        justify-content: center;
+        align-self: center;
+        z-index: 2;
+        position: absolute;
+        top: 593px;
+
+       }
+       .under-fade{
+           height: 208px;
+           width: 100%;
+           background-color: white;
+           position: absolute;
+           z-index: 1;
+           top: 593px;
+           opacity: 0.5;
+       }
+       .area-3-text{
+           text-align: center;
+           margin: 0px 300px 0px 300px;
+           
+       }
+       .area-3{
+           position: absolute;
+           top: 801px;
+           background-color: rgb(0, 157, 209);
+           color: white;
+       }
+       .area-3-smalltext{
+           margin-top: 20px;
+           margin-bottom: 100px;
+       }
+       .area-3 h1{
+           margin-top: 80px;
+       }
+       .button-1{
+          
+           border: 1px transparent ;
+           padding: 20px 45px;
+           color: white;
+           font-size: large;
+           background-color:  rgb(0, 157, 209);
+           cursor: pointer;
+       }
+       .all-buttons{
+           display: grid;
+           grid-template-columns: 250px 250px 250px ;
+           justify-content: center;
+           align-self: center;
+           box-sizing: border-box;
+          
+
+       }
+       .button-1:focus{
+           background-color: rgb(255, 255, 255);
+           border:  transparent ;
+           border-radius: 20px 20px 0px 0px ;
+           color:rgb(0, 157, 209) ;
+           font-weight: 500;
+          
+       }
+       
+       .button-1:hover{
+           border: 1px solid;
+       }
+       .results-1{
+           display: none;
+           
+           z-index: 4;
+           
+       }
+        .all-results{
+            position: absolute;
+            top: 1312px;
+            display: grid;
+            grid-template-columns: 100% 100% 100% ;
+        }
+        .area-4{
+            position: absolute;
+            z-index: 5;
+            top: 1600px;
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+            width: 100%;
+            color: white;
+            height: 350px;
+        }
+        .area-4 h1{
+            margin: 70px;
+        }
+        .area-4-smalltext{
+            margin-top: 10px;
+           margin-bottom: 100px;
+          padding:0px 300px 0px 300px;
+        }
+        .area-4 img{
+            box-shadow: 5px 5px 5px black;
+           position:absolute;
+           top: 0px;
+           width: 100%;
+           left: 0;
+           opacity: 0.1;
+
+        }
+        .area-5{
+           
+            position: absolute;
+            top: 1954px;
+            background-color: rgba(236, 236, 236, 0.63);
+            box-shadow: 3px 2px 5px ;
+
+            
+        }
+        .area-5 .all-text{
+            text-align: center;
+            padding: 70px 200px;
+           
+            
+        }
+        .area-5 h1{
+            margin: 30px 0px 50px ;
+        }
+        .division-1{
+            display: grid;
+            grid-template-columns: 400px 400px 400px ;
+            grid-gap: 100px;
+            margin-left: 100px;
+            
+            
+            
+        }
+        .division-row-1{
+            
+            box-sizing: border-box;
+          
+           
+        }
+        .division-row-2{
+           
+            box-sizing: border-box;
+        }
+        .division-row-3{
+            
+            box-sizing: border-box;
+        }
+        .row-1-1{
+            height: 550px;
+            width: 400px;
+            
+           margin-bottom: 50px;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 5px ;
+            padding:10px;
+           
+        }
+        .row-1-2{
+            height: 250px;
+            width: 400px;
+            box-shadow: 2px 2px 5px ;
+            box-sizing: border-box;
+            padding:10px;
+        }
+        .row-2-1{
+            height: 250px;
+            width: 400px;
+            margin-bottom: 90px;
+            box-shadow: 2px 2px 5px ;
+            padding:10px;
+        }
+        .row-2-2{
+            height: 550px;
+            width: 400px;
+            box-shadow: 2px 2px 5px ;
+            padding:10px;
+            margin-bottom: 50px
+            
+        }
+        .row-3-1{
+            height: 550px;
+            width: 400px;
+            border: 1px solid;
+            border: 1px solid;
+            box-shadow: 2px 2px 5px ;
+            padding:10px;
+        }
+        .division-1 h2{
+            margin: 10px;
+        }
+        .area-5 button{
+            padding: 5px 15px ;
+            border: 2px solid rgb(0, 109, 136);
+            color: rgb(0, 137, 172);
+            font-weight: 600;
+            border-radius: 15px;
+            margin: 35px 0px ;
+            cursor: pointer;
+
+        }
+        .area-5 button:hover{
+            animation: forwards button;
+        }
+
+@keyframes button {
+           0%{
+               background-color: white;
+               opacity: 0.5;
+           }
+           100%{
+               background-color: #b6dbff;
+               opacity: 1;
+           }
+           
+       }
+       .last-section{
+           background-color: rgb(255, 255, 255);
+           width: 100%;
+       }
+       .last-section .all-text{
+           display: grid;
+           grid-template-columns: 500px 500px 500px ;
+           grid-gap: 100px;
+           position: absolute;
+           top: 3300px;
+          
+          
+       }
+       .last-section h1{
+           margin-bottom: 20px;
+           color: darkblue;
+       }
+       li{
+           list-style-type: none;
+       }
+       .sec-1{
+           margin-left: 100px;
+       }
+       
+       
+      .last-section img{
+           height: 50px ;
+           width: 60px;
+       }
+       
+      
+
+        
+    </style>
+</head>
+<body>
+    <div class="nav">
+    </div>
+    <div class="top">
+       <img src="logo.png" alt="" class="logo">
+       <ul>
+           <a href=""><li>Home</li></a>
+           <a href="" ><li>Dropdown</li></a>
+           <a href=""><li>Login</li></a>
+           <a href=""><li>Contact</li></a>
+       </ul>
+    </div>
+       <div id="list">
+           <ul>
+               <a href=""><li>Option 1</li></a>
+               <a href=""><li>Option 2</li></a>
+               <a href=""><li>Option 3</li></a>
+              
+           </ul>
+
+       </div>
+       <div class="bg">
+           <img src="bg.jpg" alt="">
+           <div class="main-text">Welcome, <br>To Our Website</div>
+           <button>Learn More</button>
+       </div>
+
+       <div class="under-fade">
+
+       </div>
+       <div class="under-bg">
+           <div class="class1">
+               <img src="graph.png" class="images">
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum facilis officia consectetur a sunt architecto </p>
+           </div>
+           <div class="class1">
+            <img src="document.jpg" class="images">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum facilis  reprehenderit quas sapiente necessitatibus.</p>
+        </div>
+        <div class="class1">
+            <img src="plane.png" class="images">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum facilis officiarnecessitatibus.</p>
+        </div>
+       </div>
+       <div class="area-3">
+           <div class="area-3-text">
+           <h1>Click to Know More</h1>
+           <p class="area-3-smalltext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi blanditiis, architecto error soluta quo temporibus, ad nulla possimus impedit rerum dicta incidunt amet facere! Cupiditate maiores maxime enim provident obcaecati?</p>
+       </div>
+       <div class="all-buttons">
+          <a href="#section-1"><button class="button-1">button-1</button></a>
+          <a href="#section-2"><button class="button-1">button-2</button></a>
+          <a href="#section-3"><button class="button-1">button-3</button></a>
+       </div>
+       </div>
+       <div class="all-results">
+           <div class="result-1" id="section-1">
+               <img src="phone.jpg" alt="" height="200px">
+               <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora earum reiciendis possimus, voluptates aut aliquam </h3>
+
+           </div>
+
+           <div class="result-1" id="section-2">
+            <img src="phone.jpg" alt="" height="200px">
+            <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora earum reiciendis possimus, voluptates aut aliquam </h3>
+
+           </div>
+
+           <div class="result-1" id="section-3">
+            <img src="phone.jpg" alt="" height="200px">
+            <h3>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora earum reiciendis possimus, voluptates aut aliquam </h3>
+
+           </div>
+       </div>
+       <div class="area-4">
+        <div class="area-4-text">
+            <h1>Click to Know More</h1>
+            <p class="area-4-smalltext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi blanditiis, architecto error soluta quo temporibus, ad nulla possimus impedit rerum dicta incidunt amet facere! Cupiditate maiores maxime enim provident obcaecati?</p>
+            <img src="bg2.png" alt="" height="350px">
+        </div>
+       </div>
+
+
+
+
+
+
+       <div class="area-5">
+         <div class="all-text">
+             <h1>This Is Area - 5</h1>
+             <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ea odit aliquid id suscipit alias asperiores vero qui, enim culpa, nemo velit earum maiores totam excepturi reiciendis illo? Magni, numquam.</h2>
+         </div>
+         <div class="division-1">
+
+
+             <div class="division-row-1">
+
+
+                 <div class="row-1-1">
+                     <img src="phone.jpg" alt="" height="300px" width="380px">
+                     <h2>Section-1</h2>
+                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sit vitae omnis placeat sequi voluptates mollitia saepe autem porro fugiat.</h3>
+                     <button>Learn More</button>
+
+                 </div>
+
+                 <div class="row-1-2">
+                     <h2>Section-2</h2>
+                     <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sit vitae omnis placeat sequi voluptates mollitia saepe autem porro fugiat.</h3>
+                     <button>Learn More</button>
+                 </div>
+
+             </div>
+
+             <div class="division-row-2">
+
+                 <div class="row-2-1">
+                   
+                    <h2>Section-3</h2>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sit vitae omnis placeat sequi voluptates mollitia saepe autem porro fugiat.</h3>
+                     <button>Learn More</button>
+                 </div>
+
+                 <div class="row-2-2">
+                    <img src="pc.png" alt="" height="300px" width="400px">
+                    <h2>Section-4</h2>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sit vitae omnis placeat sequi voluptates mollitia saepe autem porro fugiat.</h3>
+                     <button>Learn More</button>
+                </div>
+
+             </div>
+
+             <div class="division-row-3">
+
+                <div class="row-3-1">
+                    <img src="laptop.jpg" alt="" height="300px" width="400px">
+                    <h2>Section-5</h2>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni sit vitae omnis placeat sequi voluptates mollitia saepe autem porro fugiat.</h3>
+                     <button>Learn More</button>
+                </div>
+         </div>
+       </div>
+       </div>
+       <hr>
+
+
+
+
+
+
+
+
+       <div class="last-section">
+
+        <div class="all-text">
+            <div class="sec-1">
+                <h1>Contact Us</h1>
+                <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam consequatur quibusdam, minima repudiandae m accusantium ipsum corporis.</h2>
+                <div class="platforms"><br><br>
+                    <span><a href=""><img src="fb.png" alt=""></a></span><br><br>
+                    <span><a href=""><img src="insta.png" alt=""></a></span><br><br>
+                    <span><a href=""><img src="app.png" alt=""></a></span><br><br>
+                </div>
+            </div>
+            <div class="sec-2">
+                <h1>Work With Us</h1>
+                <li>Link-1</li>
+                <li>Link-2</li>
+                <li>Link-3</li>
+                <li>Link-4</li>
+                <li>Link-5</li>
+                <li>Link-6</li>
+            </div>
+            <div class="ph-no">
+                <h1>Contact us with Call</h1>
+                <h2>(000-000-000)</h2><hr>
+            </div>
+        </div>
+       </div>
+       
+
+
+
+
+
+
+      
+    
+</body>
+</html>
